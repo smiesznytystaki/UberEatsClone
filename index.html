@@ -10,26 +10,48 @@
 
     <header class="navbar">
         <div class="nav-left">
-            <button class="menu-btn">☰</button>
+            <button class="menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
             <div class="logo">Uber <b>Eats</b></div>
         </div>
         <div class="nav-right">
-            <button class="btn btn-secondary">Zamów przejazd</button>
-            <button class="btn btn-primary">Zaloguj się</button>
-            <button class="btn btn-third">Zarejestruj się</button>
+            <a href="#" class="rides-link">
+                Zamów przejazd
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+            <button class="btn btn-white">Zaloguj się</button>
+            <button class="btn btn-black">Zarejestruj się</button>
         </div>
     </header>
 
     <section class="hero">
         <div class="hero-content">
             <h1>Zamów dostawę w Twojej okolicy</h1>
+            
             <div class="search-box">
-                <input type="text" placeholder="Wpisz adres dostawy" class="address-input">
-                <select class="time-select">
-                    <option>Dostarcz teraz</option>
-                    <option>Zaplanuj na później</option>
-                </select>
-                <button class="btn btn-primary search-btn">Wyszukaj restauracje</button>
+                <div class="input-wrapper address-wrapper">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    <input type="text" placeholder="Wpisz adres dostawy" class="address-input">
+                </div>
+
+                <div class="input-wrapper time-wrapper">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                    </svg>
+                    <select class="time-select">
+                        <option>Dostarcz teraz</option>
+                        <option>Zaplanuj na później</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-black search-btn">Wyszukaj restauracje</button>
+            </div>
+
+            <div class="login-prompt">
+                Lub <a href="#">Zaloguj się</a>
             </div>
         </div>
     </section>
@@ -55,11 +77,88 @@
             </div>
         </section>
 
-        <section class="feed">
-            <h2>Polecane dla Ciebie</h2>
-            <div class="restaurant-grid" id="restaurant-grid">
+        <section class="cities-section">
+            <div class="section-header">
+                <h2>Miasta w pobliżu</h2>
+                <a href="#">Wyświetl wszystkie miasta (ponad 500)</a>
+            </div>
+            <div class="map-container">
+                <img src="assets/map.png" alt="Mapa Polski z miastami">
+            </div>
+            
+            <div class="link-grid">
+                <a href="#">Białystok</a>
+                <a href="#">Koszalin</a>
+                <a href="#">Płock</a>
+                <a href="#">Trójmiasto</a>
+                <a href="#">Bydgoszcz</a>
+                <a href="#">Kraków</a>
+                <a href="#">Poznań</a>
+                <a href="#">Warszawa</a>
+                <a href="#">Częstochowa</a>
+                <a href="#">Legnica</a>
+                <a href="#">Radom</a>
+                <a href="#">Włocławek</a>
+                <a href="#">Gorzów Wielkopolski</a>
+                <a href="#">Łódź</a>
+                <a href="#">Rzeszów</a>
+                <a href="#">Wrocław</a>
+                <a href="#">Kalisz</a>
+                <a href="#">Lublin</a>
+                <a href="#">Szczecin</a>
+                <a href="#">Zielona Góra</a>
+                <a href="#">Kielce</a>
+                <a href="#">Olsztyn</a>
+                <a href="#">Toruń</a>
             </div>
         </section>
+
+        <section class="countries-section">
+            <div class="section-header">
+                <h2>Kraje, w których działa Uber Eats</h2>
+                <a href="#">Zobacz wszystkie kraje</a>
+            </div>
+            <div class="link-grid">
+                <a href="#">Argentyna</a>
+                <a href="#">Gwatemala</a>
+                <a href="#">Meksyk</a>
+                <a href="#">Sri Lanka</a>
+                <a href="#">Australia</a>
+                <a href="#">Hiszpania</a>
+                <a href="#">Niemcy</a>
+                <a href="#">Stany Zjednoczone</a>
+                <a href="#">Belgia</a>
+                <a href="#">Holandia</a>
+                <a href="#">Norwegia</a>
+                <a href="#">Szwajcaria</a>
+                <a href="#">Chile</a>
+                <a href="#">Irlandia</a>
+                <a href="#">Nowa Zelandia</a>
+                <a href="#">Szwecja</a>
+                <a href="#">Dania</a>
+                <a href="#">Japonia</a>
+                <a href="#">Panama</a>
+                <a href="#">Tajwan (Republika Chińska)</a>
+                <a href="#">Dominikana</a>
+                <a href="#">Kanada</a>
+                <a href="#">Polska</a>
+                <a href="#">Wielka Brytania</a>
+                <a href="#">Ekwador</a>
+                <a href="#">Kenia</a>
+                <a href="#">Portugalia</a>
+                <a href="#">Włochy</a>
+                <a href="#">Finlandia</a>
+                <a href="#">Kostaryka</a>
+                <a href="#">Republika Południowej Afryki</a>
+                <a href="#">Francja</a>
+                <a href="#">Luksemburg</a>
+                <a href="#">Salwador</a>
+            </div>
+        </section>
+        
+        <div class="disclaimer">
+            Dowiedz się, jak ustalane są wyniki. <a href="#">Więcej informacji</a>
+        </div>
     </main>
 
     <footer class="footer">
