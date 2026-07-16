@@ -1,11 +1,4 @@
 const categoriesData = [
-    { name: "Promocje", img: "https://cdn-icons-png.flaticon.com/512/879/879859.png" },
-    { name: "Burgery", img: "https://cdn-icons-png.flaticon.com/512/3075/3075977.png" },
-    { name: "Pizza", img: "https://cdn-icons-png.flaticon.com/512/3595/3595458.png" },
-    { name: "Zdrowe", img: "https://cdn-icons-png.flaticon.com/512/135/135574.png" },
-    { name: "Kawa", img: "https://cdn-icons-png.flaticon.com/512/924/924514.png" },
-    { name: "Azjatycka", img: "https://cdn-icons-png.flaticon.com/512/3448/3448066.png" },
-    { name: "Desery", img: "https://cdn-icons-png.flaticon.com/512/3173/3173426.png" }
 ];
 
 const restaurantsData = [
