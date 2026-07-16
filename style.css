@@ -54,6 +54,11 @@ body {
     background-color: var(--color-surface);
 }
 
+.btn-third {
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -90,82 +95,107 @@ body {
 }
 
 .hero {
-    background-image: url(assets/background.jpg);
+    background-image: url('assets/background.jpg');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     height: 1000px;
     display: flex;
-    align-items: left;
-    justify-content: center;
-    text-align: center;
+    align-items: center;
+    padding: 0 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 10;
+    display: flex;
     flex-direction: column;
-    padding: 20px;
 }
 
 .hero-content h1 {
     font-size: 3rem;
-    margin-bottom: 30px;
-    max-width: 500px;
+    margin-bottom: 24px;
+    max-width: 700px;
     text-align: left;
 }
 
 .search-box {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-    border-radius: 32px;
+    display: inline-flex;
+    align-items: center;
+    background: #fff;
+    padding: 8px;
+    border-radius: 50px;
 }
 
 .search-box input, .search-box select {
     border: none;
-    padding: 15px;
+    padding: 16px 20px;
     font-size: 16px;
     outline: none;
-    background: var(--color-surface);
-    border-radius: 20px;
+    background: transparent;
 }
 
 .address-input {
-    flex: 1;
-    min-width: 300px;
+    width: 380px;
+    border-right: 1px solid #e2e2e2;
 }
 
-
-.categories {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    padding: 30px 0;
-    scrollbar-width: none;
-}
-
-.categories-links a{
-    color: #000000;
-    font-size: 14px;
-}
-
-.categories::-webkit-scrollbar {
-    display: none;
-}
-
-.category-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    min-width: 80px;
+.time-select {
+    width: 180px;
     cursor: pointer;
 }
 
-.category-item img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
+.search-btn {
+    border-radius: 50px;
+    padding: 16px 32px;
+    font-size: 16px;
+    margin-left: 8px;
+    white-space: nowrap;
 }
 
-.category-item span {
-    font-size: 14px;
-    font-weight: bold;
+.promo-section {
+    padding: 40px 0;
+}
+
+.promo-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.promo-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.promo-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+    margin-bottom: 16px;
+}
+
+.promo-card h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--color-text);
+}
+
+.promo-card a {
+    color: var(--color-primary);
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.promo-card a:hover {
+    text-decoration: none;
 }
 
 .feed h2 {
@@ -222,43 +252,58 @@ body {
     color: var(--color-text-light);
 }
 
-
 .footer {
     background-color: var(--color-primary);
     color: #fff;
     padding: 60px 20px;
     margin-top: 40px;
-    height: 400px;
 }
 
 .footer-links {
     display: flex;
     gap: 10px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .footer-links a {
     color: #fff;
     text-decoration: none;
     font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .footer-links a:hover {
     text-decoration: underline;
 }
 
-
 @media (max-width: 768px) {
     .search-box {
+        display: flex;
         flex-direction: column;
         border-radius: 12px;
         background: transparent;
         box-shadow: none;
+        width: 100%;
+    }
+    .address-input, .time-select {
+        width: 100%;
+        border-right: none;
+        background: #fff;
+        margin-bottom: 8px;
+        border-radius: 8px;
+    }
+    .search-btn {
+        width: 100%;
+        margin-left: 0;
+        border-radius: 8px;
     }
     .hero-content h1 {
         font-size: 2rem;
     }
-    .address-input {
-        min-width: 100%;
+    .promo-grid {
+        flex-direction: column;
     }
 }

@@ -1,6 +1,3 @@
-const categoriesData = [
-];
-
 const restaurantsData = [
     {
         id: 1,
@@ -52,17 +49,7 @@ const restaurantsData = [
     }
 ];
 
-function renderCategories() {
-    const container = document.getElementById('categories-container');
-    const categoriesHTML = categoriesData.map(cat => `
-        <div class="category-item">
-            <img src="${cat.img}" alt="${cat.name}">
-            <span>${cat.name}</span>
-        </div>
-    `).join('');
-    
-    container.innerHTML = categoriesHTML;
-}
+
 
 function renderRestaurants() {
     const container = document.getElementById('restaurant-grid');
@@ -84,6 +71,5 @@ function renderRestaurants() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    renderCategories();
     renderRestaurants();
 });
