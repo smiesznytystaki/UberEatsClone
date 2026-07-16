@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Eats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Nawigacja -->
+    <header class="navbar">
+        <div class="nav-left">
+            <button class="menu-btn">☰</button>
+            <div class="logo">Uber <b>Eats</b></div>
+        </div>
+        <div class="nav-right">
+            <button class="btn btn-secondary">Zaloguj się</button>
+            <button class="btn btn-primary">Zarejestruj się</button>
+        </div>
+    </header>
+
+    <!-- Sekcja Hero (Wyszukiwarka) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Zamów jedzenie z dostawą wprost pod drzwi</h1>
+            <div class="search-box">
+                <input type="text" placeholder="Wpisz adres dostawy" class="address-input">
+                <select class="time-select">
+                    <option>Zaraz</option>
+                    <option>Zaplanuj</option>
+                </select>
+                <button class="btn btn-primary search-btn">Szukaj</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Kategorie (karuzela) -->
+        <section class="categories" id="categories-container">
+            <!-- Tutaj JS wstrzyknie kategorie -->
+        </section>
+
+        <!-- Lista restauracji -->
+        <section class="feed">
+            <h2>Polecane dla Ciebie</h2>
+            <div class="restaurant-grid" id="restaurant-grid">
+                <!-- Tutaj JS wstrzyknie karty restauracji -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Stopka -->
+    <footer class="footer">
+        <div class="container">
+            <div class="logo-footer">Uber <b>Eats</b></div>
+            <div class="footer-links">
+                <a href="#">Uzyskaj pomoc</a>
+                <a href="#">Dodaj restaurację</a>
+                <a href="#">Zarejestruj się jako dostawca</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
